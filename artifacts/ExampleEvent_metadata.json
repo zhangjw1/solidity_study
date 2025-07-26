@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Deposit",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"Deposit(address,string,uint256)": {
+					"notice": "event 关键字用来声明一个事件。你可以把它想象成一个日志的模板。 这个模板叫做 Deposit，它规定了每条日志需要包含三个信息： from: 存款人的地址 (address)。 name: 这笔存款的名称，是一个字符串 (string)。 value: 存款的金额 (uint256"
+				}
+			},
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ExampleEvent.sol": "ExampleEvent"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ExampleEvent.sol": {
+			"keccak256": "0x20e2f39bd61af9cc283accb7a9cb08ce89bd9812932ab0f9a8f8261466ffceef",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b2020d4b84a5cc51759bfc943338b3f87c2ec1fdbc5d1a4068118d93fa56768a",
+				"dweb:/ipfs/QmeooDpFUcr5DmJ55whVFn8C1FFAxahEh3g1uMycaeouyx"
+			]
+		}
+	},
+	"version": 1
+}
