@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "age",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "scopeCall",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "scopeExternal",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "scopePublic",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "作用域\t合约外部可见\t合约内部可见\t子合约可见\t说明 public\t✔️\t✔️\t✔️\t公开，任何人都能调用 external\t✔️\t仅 this.\t✖️\t只能外部调用，合约内部不能直接调用 internal\t✖️\t✔️\t✔️\t仅本合约和子合约可见 private\t✖️\t✔️\t✖️\t仅本合约可见",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ExampleFunctionScope.sol": "ExampleFunctionScope"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ExampleFunctionScope.sol": {
+			"keccak256": "0x4893704c3fc1652853a801e918e4a509a388e00bac96550cad609d911a8a7455",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c1d94020d2d2aeef0a15d31ccd73e1799fb9368a332cbbfa9a72f5988e6f53d1",
+				"dweb:/ipfs/QmVen115M71FuEFSFLrWhVFMQXyt6sCVHP2ytc3M3LD2fa"
+			]
+		}
+	},
+	"version": 1
+}

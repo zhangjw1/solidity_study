@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "error",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "Unauthorized",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "withraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ExampleError.sol": "ExampleError"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ExampleError.sol": {
+			"keccak256": "0xb485583a91b3085cb01081cc15d829368d3191708415791930b89daa9b326e2a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cd23103774a56a23d8c2b9448ae57d1dcf8f9008db5f06bcbc1557767c719ea2",
+				"dweb:/ipfs/QmYarEEnUyta5XX22JMctuDy8Zjb9Rne5LBwdPpC5y6baC"
+			]
+		}
+	},
+	"version": 1
+}
