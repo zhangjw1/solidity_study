@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.22+commit.4fc1097e"
+		"version": "0.8.30+commit.73712a01"
 	},
 	"language": "Solidity",
 	"output": {
@@ -71,6 +71,64 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "showEnumMapping",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "key0",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "key1",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value1",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "key2",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value2",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "key3",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value3",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "key4",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value4",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "enum ExampleEnum.Status",
@@ -84,6 +142,39 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testEnumValues",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "pure",
@@ -105,7 +196,7 @@
 		"compilationTarget": {
 			"ExampleEnum.sol": "ExampleEnum"
 		},
-		"evmVersion": "shanghai",
+		"evmVersion": "prague",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -118,11 +209,11 @@
 	},
 	"sources": {
 		"ExampleEnum.sol": {
-			"keccak256": "0x448a47a16440edf1e06a0959fdf0ddacbc40c0fea715ade16c37a19a26e83662",
+			"keccak256": "0x509da7f349db65ad5bba3e5bb1e65ff079ccd08be24928e4c3e5b6df0e6015c8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7820e86ad6af78e7f6fce977ebd02ea5480cbc507b27dc85a9fff3f4506ceabe",
-				"dweb:/ipfs/QmRNvNyBPRifMZyHcL5y8zNAFaSnvxpGDFDGG1pDGJjhLE"
+				"bzz-raw://e4adbfb778a5b45af419fa1ddefc3fc5cd92d56f2d0f83866b61bc2a2005d8d4",
+				"dweb:/ipfs/QmWT4Jte3WSoUJSpKsc5XfRy32LEW9wVqHvVeMaBSHLDRL"
 			]
 		}
 	},
