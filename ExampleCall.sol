@@ -4,9 +4,15 @@ pragma solidity >=0.8.20;
 contract Receiver {
     event Received(address caller, uint256 amount, string message);
 
+    //receive函数是EVM的内置函数，当合约收到ETH时会自动调用，不需要function关键字
     receive() external payable {
         emit Received(msg.sender, msg.value, "receive was called");
     }
+    /**
+    fallback调用时机：
+    1.当合约收到ETH时，如果合约没有receive函数，就会调用fallback函数
+    2.调用不存在的函数
+    */
     fallback() external payable {
         emit Received(msg.sender, msg.value, "fallback was called");
      }
