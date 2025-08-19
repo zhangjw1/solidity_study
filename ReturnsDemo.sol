@@ -1,6 +1,46 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0;
 
+/**
+
+                 ┌─────────────────────────────┐
+                 │   函数声明了 returns 吗？   │
+                 └─────────────┬──────────────┘
+                               │
+             ┌─────────────────┴─────────────────┐
+             │                                   │
+           是                                否
+             │                                   │
+┌────────────┴─────────────┐                编译错误或无返回值
+│                         │
+函数是否有具名返回变量？      │
+│                         │
+├─────────────┬───────────┤
+│             │           │
+是           否          ─> 必须显式写 return
+│
+│
+函数体里是否给具名返回变量赋值？
+│
+├─────────────┬────────────┐
+│             │            │
+是           否           ─> 返回类型的默认值
+│
+│
+函数结束时会自动 return 这些变量，无需显式 return
+
+
+没有 returns → 函数不返回值，return 可省略。
+
+有 returns 且无具名变量 → 必须显式写 return，否则编译报错。
+
+有具名返回变量
+
+赋值了 → 结尾会自动 return，return 可省略。
+
+未赋值 → 返回类型默认值（如 uint → 0, bool → false 等）。
+*/
+
 contract ReturnsDemo {
     // 1. 状态变量的自动 getter
     uint public number = 42;                    // 自动生成 getter
@@ -73,65 +113,3 @@ contract ReturnsDemo {
         return (name, age, true);  // 使用 return 覆盖 isStudent
     }
 }
-
-// 演示投票合约中的情况
-contract BallotReturns {
-    struct Voter {
-        uint weight;
-        bool voted;
-        address delegate;
-        uint vote;
-    }
-    
-    struct Proposal {
-        bytes32 name;
-        uint voteCount;
-    }
-    
-    mapping(address => Voter) public voters;  // 自动生成 getter
-    Proposal[] public proposals;              // 自动生成 getter
-    
-    constructor(bytes32[] memory proposalNames) {
-        for (uint i = 0; i < proposalNames.length; i++) {
-            proposals.push(Proposal({
-                name: proposalNames[i],
-                voteCount: 0
-            }));
-        }
-    }
-    
-    // 显式定义的函数（有 return）
-    function getVoter(address voter) external view returns (Voter memory) {
-        return voters[voter];  // 显式 return
-    }
-    
-    function getProposal(uint index) external view returns (Proposal memory) {
-        require(index < proposals.length, "Index out of bounds");
-        return proposals[index];  // 显式 return
-    }
-    
-    // 命名返回值的函数
-    function getVoterDetails(address voter) external view returns (
-        uint weight,
-        bool voted,
-        address delegate,
-        uint vote
-    ) {
-        Voter storage v = voters[voter];
-        weight = v.weight;       // 直接赋值
-        voted = v.voted;         // 直接赋值
-        delegate = v.delegate;   // 直接赋值
-        vote = v.vote;           // 直接赋值
-        // 不需要 return 语句
-    }
-    
-    // 混合使用
-    function getProposalDetails(uint index) external view returns (
-        bytes32 name,
-        uint voteCount
-    ) {
-        require(index < proposals.length, "Index out of bounds");
-        name = proposals[index].name;        // 直接赋值
-        return (name, proposals[index].voteCount);  // 使用 return
-    }
-} 
